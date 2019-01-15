@@ -7,7 +7,6 @@ var cheerio = require("cheerio");
 var app = express();
 
 // Require all models
-// var db = require("./models");
 
 var PORT = 3000;
 
@@ -19,10 +18,10 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-// mongoose.connect(
-//   "mongodb://localhost/scraper",
-//   { useNewUrlParser: true }
-// );
+mongoose.connect(
+  "mongodb://localhost/scraperApp",
+  { useNewUrlParser: true }
+);
 
 // Routes
 require("./routes/apiroutes")(app);

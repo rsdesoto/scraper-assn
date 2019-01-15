@@ -1,3 +1,7 @@
+var axios = require("axios");
+var cheerio = require("cheerio");
+var db = require("../models");
+
 module.exports = function(app) {
   // A GET route for scraping the echoJS website
   app.get("/scrape", function(req, res) {
@@ -19,16 +23,17 @@ module.exports = function(app) {
           .children("a")
           .attr("href");
 
+        console.log(result);
         // Create a new Article using the `result` object built from scraping
-        db.Article.create(result)
-          .then(function(dbArticle) {
-            // View the added result in the console
-            console.log(dbArticle);
-          })
-          .catch(function(err) {
-            // If an error occurred, log it
-            console.log(err);
-          });
+        // db.Article.create(result)
+        //   .then(function(dbArticle) {
+        //     // View the added result in the console
+        //     console.log(dbArticle);
+        //   })
+        //   .catch(function(err) {
+        //     // If an error occurred, log it
+        //     console.log(err);
+        //   });
       });
 
       // Send a message to the client
