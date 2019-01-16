@@ -5,9 +5,9 @@ var Schema = mongoose.Schema;
 
 var CommentSchema = new Schema({
   // `title` is of type String
-  title: String,
+  name: String,
   // `body` is of type String
-  body: String,
+  comment: String,
   // many comments can be included on one article. include the
   // aricle ID to link comments to ID
   article: {

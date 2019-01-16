@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../css/article.css"
+    />
   </head>
   <body>
     <!-- keep all article specifics and notes here -->
@@ -13,7 +18,21 @@
       <h1>Note Scraper - Details</h1>
 
       <div id="articleInfo"><p>temp text placeholder</p></div>
-      <div id="note-details"></div>
+      <div id="noteDetails"></div>
+
+      <form class="comment-form">
+        <div class="input-field">
+          <input id="input-name" type="text" required />
+          <label for="input-name">Name</label>
+        </div>
+        <div class="input-field">
+          <input id="input-text" type="text" required />
+          <label for="input-text">Comment</label>
+        </div>
+        <input type="submit" id="input-submit" value="Submit Comment" />
+      </form>
+
+      <button class="home">Go Home</button>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
