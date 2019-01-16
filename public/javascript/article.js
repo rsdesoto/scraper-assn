@@ -63,6 +63,8 @@ $("#input-submit").on("click", function(event) {
     // $("#test").load("article.html");
     $("#noteDetails").append(`<h2>${data.name}</h2>`);
     $("#noteDetails").append(`<p>${data.comment}</p>`);
+    $("#input-name").val("");
+    $("#input-text").val("");
   });
 });
 
