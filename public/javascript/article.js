@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 $("#input-submit").on("click", function(event) {
   event.preventDefault();
-  alert("hi");
+
   var name = $("#input-name")
     .val()
     .trim();
@@ -45,8 +45,7 @@ $("#input-submit").on("click", function(event) {
     alert("Please enter a name and a comment");
     return;
   }
-  alert(name);
-  alert(comment);
+
   var pathname = window.location.pathname;
   var apiname = pathname.substring(9);
   console.log(apiname);

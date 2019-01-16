@@ -15,6 +15,17 @@ $.getJSON("/allarticles", function(data) {
   }
 });
 
+$("#rescraper").on("click", function(event) {
+  event.preventDefault();
+  $.ajax({
+    method: "GET",
+    url: "/scrape"
+  }).then(function(data) {
+    console.log(data);
+    location.reload();
+  });
+});
+
 // whenever someone clicks a p tag -- link to the article page.
 // load the article into the article section.
 // load the notes.

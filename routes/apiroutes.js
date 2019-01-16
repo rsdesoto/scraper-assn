@@ -4,6 +4,15 @@ var db = require("../models");
 
 module.exports = function(app) {
   // A GET route for scraping the nyt technology website
+  // remove all databases
+  db.Comment.deleteMany({}, function(err) {
+    console.log("collection removed");
+  });
+
+  db.Article.deleteMany({}, function(err) {
+    console.log("collection removed");
+  });
+
   app.get("/scrape", function(req, res) {
     // First, we grab the body of the html with axios
     axios
