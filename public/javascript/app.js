@@ -34,17 +34,6 @@ $(document).on("click", ".article-info", function() {
   var thisID = $(this).attr("data-id");
   //   alert(thisID);
   location.replace("/article/" + thisID);
-
-  //   $("#article-detail").empty();
-  //   //   $(".note-details").empty;
-  //   $.ajax({
-  //     method: "GET",
-  //     url: "/articles/" + thisID
-  //   }).then(function(data) {
-  //     console.log(data);
-  //     // $("#test").load("article.html");
-  //     $("#articleInfo").append("<p>Hi</p>");
-  //   });
 });
 
 // When you click the savenote button
